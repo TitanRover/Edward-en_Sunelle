@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin | Edward & Sunelle</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-page admin-page">
+    <header class="site-header app-header" aria-label="Admin navigation">
+      <a class="mark" href="index.html" aria-label="Edward and Sunelle home">E & S</a>
+      <nav>
+        <a href="index.html">Site</a>
+        <a href="rsvp.html">RSVP</a>
+        <button class="nav-button hidden" type="button" data-sign-out>Sign out</button>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="app-panel" data-login-panel>
+        <p class="kicker">Private</p>
+        <h1 class="app-title">Admin Login</h1>
+        <p class="app-copy">Use the admin account created in Supabase.</p>
+        <form class="stack-form" data-login-form>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="hero-button dark-button" type="submit">Sign in</button>
+        </form>
+        <div class="notice" data-login-status></div>
+      </section>
+
+      <section class="admin-dashboard hidden" data-dashboard>
+        <div class="admin-heading">
+          <div>
+            <p class="kicker">Edward & Sunelle</p>
+            <h1 class="app-title">RSVP Admin</h1>
+          </div>
+          <button class="hero-button dark-button" type="button" data-refresh>Refresh</button>
+        </div>
+
+        <div class="stats-grid" data-stats></div>
+
+        <section class="admin-card">
+          <h2>Add guest</h2>
+          <form class="guest-form" data-guest-form>
+            <label>
+              Guest name
+              <input name="guest_name" type="text" required />
+            </label>
+            <label>
+              Group name
+              <input name="group_name" type="text" placeholder="Family or invite group" />
+            </label>
+            <label>
+              Seats
+              <input name="max_guests" type="number" min="1" max="10" value="1" required />
+            </label>
+            <label class="checkbox-label">
+              <input name="plus_one_allowed" type="checkbox" />
+              Plus-one allowed
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" />
+            </label>
+            <label class="wide-field">
+              Notes
+              <input name="notes" type="text" />
+            </label>
+            <button class="hero-button dark-button" type="submit">Create guest link</button>
+          </form>
+          <div class="notice" data-admin-status></div>
+        </section>
+
+        <section class="admin-card">
+          <div class="table-actions">
+            <h2>Guests</h2>
+            <div>
+              <button class="hero-button dark-button" type="button" data-export-links>Export links CSV</button>
+              <button class="hero-button dark-button" type="button" data-export-rsvps>Export RSVPs CSV</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Group</th>
+                  <th>Status</th>
+                  <th>Seats</th>
+                  <th>Plus one</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody data-guest-rows></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
