@@ -30,6 +30,12 @@ iframe {
   max-width: 100%;
 }
 
+.hero-photo-placeholder > img,
+.photo-placeholder > img,
+.photo-banner img {
+  object-position: center center !important;
+}
+
 a {
   color: inherit;
 }
