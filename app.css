@@ -211,6 +211,13 @@
   grid-column: span 2;
 }
 
+.table-actions > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .table-wrap {
   overflow-x: auto;
   margin-top: 18px;
@@ -258,5 +265,203 @@
 
   .wide-field {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    position: sticky;
+    top: 0;
+    align-items: center;
+    padding: 12px 14px;
+  }
+
+  .app-header .mark {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .app-header nav {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 12px;
+    max-width: none;
+    font-size: 10px;
+  }
+
+  .nav-button {
+    padding: 0;
+  }
+
+  .app-shell,
+  .admin-shell {
+    width: min(100% - 24px, 1120px);
+    padding: 28px 0 46px;
+  }
+
+  .app-panel,
+  .admin-card {
+    padding: 22px 16px;
+  }
+
+  .app-title {
+    margin-bottom: 14px;
+    font-size: clamp(38px, 15vw, 56px);
+    line-height: 1;
+  }
+
+  .app-copy,
+  .notice {
+    font-size: 14px;
+  }
+
+  .admin-dashboard {
+    gap: 16px;
+  }
+
+  .admin-heading,
+  .table-actions {
+    gap: 14px;
+  }
+
+  .admin-heading .hero-button,
+  .table-actions .hero-button,
+  .guest-form .hero-button,
+  .stack-form .hero-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .table-actions > div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid article {
+    min-height: 104px;
+    padding: 16px;
+  }
+
+  .stats-grid article:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .stats-grid strong {
+    font-size: 36px;
+  }
+
+  .guest-form {
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .checkbox-label {
+    min-height: 46px;
+    padding: 10px 0;
+  }
+
+  .table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .admin-table,
+  .admin-table tbody,
+  .admin-table tr,
+  .admin-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tr {
+    margin-bottom: 12px;
+    border: 1px solid var(--line);
+    background: var(--white);
+  }
+
+  .admin-table td {
+    display: grid;
+    grid-template-columns: 94px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .admin-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .admin-table td::before {
+    color: var(--soft-ink);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .admin-table td:nth-child(1)::before {
+    content: "Name";
+  }
+
+  .admin-table td:nth-child(2)::before {
+    content: "Group";
+  }
+
+  .admin-table td:nth-child(3)::before {
+    content: "Status";
+  }
+
+  .admin-table td:nth-child(4)::before {
+    content: "Seats";
+  }
+
+  .admin-table td:nth-child(5)::before {
+    content: "Plus one";
+  }
+
+  .admin-table td:nth-child(6)::before {
+    content: "Link";
+  }
+
+  .link-button {
+    justify-self: start;
+    min-height: 34px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .app-header {
+    gap: 10px;
+  }
+
+  .app-header nav {
+    gap: 9px;
+    font-size: 9px;
+  }
+
+  .admin-table td {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 10px;
+    padding: 11px 12px;
   }
 }
