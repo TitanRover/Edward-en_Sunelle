@@ -67,6 +67,10 @@ a {
   flex: 0 0 auto;
 }
 
+.hero-mark-mobile {
+  display: none;
+}
+
 nav {
   display: flex;
   gap: clamp(14px, 3vw, 32px);
@@ -866,5 +870,54 @@ footer p {
   .hero-button,
   .text-link {
     width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    justify-content: center;
+    padding: 16px 14px 0;
+  }
+
+  .site-header .mark {
+    display: none;
+  }
+
+  .site-header nav {
+    width: 100%;
+    max-width: none;
+    justify-content: center;
+    text-align: center;
+    gap: 10px 16px;
+  }
+
+  .hero-content {
+    padding-top: clamp(138px, 18svh, 176px);
+  }
+
+  .hero-mark-mobile {
+    display: inline-grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    margin: 0 auto 16px;
+    border: 1px solid currentColor;
+    color: var(--white);
+    font-size: 16px;
+    letter-spacing: 0;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header nav {
+    font-size: 9px;
+    gap: 9px 12px;
+  }
+
+  .hero-mark-mobile {
+    width: 58px;
+    height: 58px;
+    font-size: 15px;
   }
 }
