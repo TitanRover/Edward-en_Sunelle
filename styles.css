@@ -920,3 +920,49 @@ footer p {
     font-size: 15px;
   }
 }
+
+@media (max-width: 620px) {
+  .photo-banner > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    min-height: clamp(360px, 92vw, 560px) !important;
+  }
+
+  .photo-banner img {
+    height: 100% !important;
+    min-height: 360px;
+  }
+
+  .photo-story {
+    gap: 26px;
+    align-items: start;
+    text-align: center;
+  }
+
+  .photo-story-copy {
+    position: relative;
+    z-index: 1;
+  }
+
+  .photo-placeholder.arch {
+    width: min(100%, 320px);
+    min-height: 400px;
+    margin: 0 auto;
+  }
+
+  .intro-layout {
+    gap: 24px;
+    align-items: start;
+  }
+
+  .intro-layout .section-heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .photo-placeholder.small {
+    position: relative;
+    z-index: 0;
+    margin-top: 0;
+  }
+}
