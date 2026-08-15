@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSVP | Edward & Sunelle</title>
+    <meta name="description" content="RSVP for Edward and Sunelle's wedding on 7 November 2026." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body class="app-page">
+    <header class="site-header app-header" aria-label="Wedding navigation">
+      <a class="mark" href="index.html" aria-label="Edward and Sunelle home">E & S</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#details">Details</a>
+        <a href="index.html#venue">Venue</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="app-panel rsvp-panel">
+        <p class="kicker">Edward & Sunelle</p>
+        <h1 class="app-title">RSVP</h1>
+        <p class="app-copy">Please confirm your attendance by Monday, 7 September 2026.</p>
+
+        <div class="notice" data-rsvp-status>Checking your invitation link...</div>
+
+        <form class="rsvp-form hidden" data-rsvp-form>
+          <div class="guest-card">
+            <span>Your invitation</span>
+            <strong data-guest-name></strong>
+            <p data-guest-details></p>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Will you be attending?</legend>
+            <label>
+              <input type="radio" name="attending" value="accepted" required />
+              Joyfully accepts
+            </label>
+            <label>
+              <input type="radio" name="attending" value="declined" required />
+              Regretfully declines
+            </label>
+          </fieldset>
+
+          <label>
+            Number of guests attending
+            <select name="guest_count" data-guest-count required></select>
+          </label>
+
+          <label data-plus-one-field class="hidden">
+            Plus-one name
+            <input name="plus_one_name" type="text" autocomplete="name" />
+          </label>
+
+          <label>
+            Dietary requirements
+            <textarea name="dietary_requirements" rows="4" placeholder="Let us know about allergies or dietary needs."></textarea>
+          </label>
+
+          <label>
+            Meal choice
+            <select name="meal_choice">
+              <option value="">To be confirmed later</option>
+              <option value="chicken">Chicken</option>
+              <option value="beef">Beef</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="kids">Kids meal</option>
+            </select>
+          </label>
+
+          <label>
+            Song request
+            <input name="song_request" type="text" placeholder="Optional" />
+          </label>
+
+          <button class="hero-button dark-button" type="submit">Submit RSVP</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="rsvp.js"></script>
+  </body>
+</html>
