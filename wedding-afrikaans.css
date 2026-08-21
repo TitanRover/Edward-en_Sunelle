@@ -68,6 +68,13 @@
   color: var(--white);
 }
 
+.dress-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: start;
+}
+
 .dress-copy {
   display: grid;
   gap: 16px;
@@ -81,6 +88,30 @@
 .dress-copy h3 {
   margin: 10px 0 0;
   font-size: clamp(24px, 3vw, 34px);
+}
+
+.dress-reference {
+  margin: 0;
+}
+
+.dress-reference img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  filter: grayscale(1) contrast(1.04);
+}
+
+.dress-reference figcaption {
+  margin-top: 10px;
+  color: var(--soft-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .gift-simple {
@@ -224,6 +255,14 @@
 }
 
 @media (max-width: 900px) {
+  .dress-content {
+    grid-template-columns: 1fr;
+  }
+
+  .dress-reference {
+    width: min(100%, 320px);
+  }
+
   .accommodation-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -244,6 +283,10 @@
   .quote-panel p {
     max-width: calc(100vw - 16px);
     font-size: clamp(14px, 3.6vw, 20px);
+  }
+
+  .dress-reference {
+    width: 100%;
   }
 
   .gift-split .hero-button,
