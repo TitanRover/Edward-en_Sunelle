@@ -68,11 +68,10 @@
   color: var(--white);
 }
 
-.dress-content {
+.dress-heading-block {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
-  gap: clamp(22px, 4vw, 42px);
-  align-items: start;
+  gap: 18px;
+  align-content: start;
 }
 
 .dress-copy {
@@ -91,17 +90,17 @@
 }
 
 .dress-reference {
-  margin: 0;
+  width: min(100%, 360px);
+  margin: 10px 0 0;
 }
 
 .dress-reference img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
   border: 1px solid rgba(0, 0, 0, 0.18);
-  filter: grayscale(1) contrast(1.04);
 }
 
 .dress-reference figcaption {
@@ -255,10 +254,6 @@
 }
 
 @media (max-width: 900px) {
-  .dress-content {
-    grid-template-columns: 1fr;
-  }
-
   .dress-reference {
     width: min(100%, 320px);
   }
