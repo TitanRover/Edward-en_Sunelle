@@ -3,18 +3,21 @@
   place-items: center;
   min-height: clamp(220px, 34vw, 420px);
   padding: clamp(54px, 8vw, 96px) 18px;
+  overflow: hidden;
   text-align: center;
 }
 
 .quote-panel p {
-  max-width: 980px;
+  width: max-content;
+  max-width: calc(100vw - 36px);
   margin: 0;
   color: var(--ink);
   font-family: "Parisienne", Georgia, "Times New Roman", serif;
-  font-size: clamp(46px, 9vw, 116px);
+  font-size: clamp(34px, 5.9vw, 86px);
   font-weight: 400;
   line-height: 1.05;
   text-transform: none;
+  white-space: nowrap;
 }
 
 .light-button {
@@ -233,11 +236,14 @@
   }
 
   .quote-panel {
-    min-height: 240px;
+    min-height: 220px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .quote-panel p {
-    font-size: clamp(42px, 15vw, 74px);
+    max-width: calc(100vw - 20px);
+    font-size: clamp(18px, 5.2vw, 32px);
   }
 
   .gift-split .hero-button,
