@@ -90,17 +90,19 @@
 }
 
 .dress-reference {
-  width: min(100%, 360px);
+  width: min(100%, 280px);
   margin: 10px 0 0;
 }
 
 .dress-reference img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: contain !important;
   object-position: center;
   border: 1px solid rgba(0, 0, 0, 0.18);
+  filter: none !important;
 }
 
 .dress-reference figcaption {
@@ -255,7 +257,7 @@
 
 @media (max-width: 900px) {
   .dress-reference {
-    width: min(100%, 320px);
+    width: min(100%, 260px);
   }
 
   .accommodation-grid {
@@ -281,7 +283,7 @@
   }
 
   .dress-reference {
-    width: 100%;
+    width: min(100%, 240px);
   }
 
   .gift-split .hero-button,
