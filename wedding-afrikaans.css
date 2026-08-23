@@ -20,7 +20,11 @@
   white-space: nowrap;
 }
 
-.hero h1,
+.hero h1 {
+  font-family: "Alex Brush", "Parisienne", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
 .timeline-heading > .kicker,
 .gift-split article > .kicker,
 .dress-heading-block > .kicker,
@@ -32,16 +36,8 @@
   font-weight: 400;
   line-height: 0.96;
   letter-spacing: 0;
-  text-transform: none;
-}
-
-.timeline-heading > .kicker,
-.gift-split article > .kicker,
-.dress-heading-block > .kicker,
-.accommodation-heading > .kicker,
-.rsvp-heading > .kicker,
-.faq-panel .section-heading > .kicker {
   margin-bottom: 18px;
+  text-transform: none;
 }
 
 .light-button {
