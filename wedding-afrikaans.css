@@ -29,6 +29,7 @@
 .gift-split article > .kicker,
 .dress-heading-block > .kicker,
 .accommodation-heading > .kicker,
+.section.split > .section-heading > .kicker,
 .rsvp-heading > .kicker,
 .faq-panel .section-heading > .kicker {
   font-family: "Alex Brush", "Parisienne", Georgia, "Times New Roman", serif;
@@ -325,6 +326,7 @@
   .gift-split article > .kicker,
   .dress-heading-block > .kicker,
   .accommodation-heading > .kicker,
+  .section.split > .section-heading > .kicker,
   .rsvp-heading > .kicker,
   .faq-panel .section-heading > .kicker {
     font-size: clamp(42px, 13vw, 56px);
