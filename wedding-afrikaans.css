@@ -29,6 +29,7 @@
 .gift-split article > .kicker,
 .dress-heading-block > .kicker,
 .accommodation-heading > .kicker,
+.breakfast-heading > .kicker,
 .section.split > .section-heading > .kicker,
 .rsvp-heading > .kicker,
 .faq-panel .section-heading > .kicker {
@@ -76,21 +77,24 @@
   height: auto;
 }
 
-.gift-photo-banner {
+.gift-photo-banner,
+.breakfast-photo-banner {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   background: #050505;
   overflow: hidden;
 }
 
-.gift-photo-banner > div {
+.gift-photo-banner > div,
+.breakfast-photo-banner > div {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
   background: #050505;
 }
 
-.gift-photo-banner img {
+.gift-photo-banner img,
+.breakfast-photo-banner img {
   display: block;
   width: 100vw !important;
   max-width: none !important;
@@ -251,6 +255,41 @@
   line-height: 1.45;
 }
 
+.breakfast-section {
+  padding: clamp(56px, 9vw, 104px) 0;
+}
+
+.breakfast-heading {
+  text-align: center;
+}
+
+.breakfast-heading h2 {
+  font-size: clamp(30px, 4.6vw, 56px);
+  font-weight: 400;
+  line-height: 0.96;
+}
+
+.breakfast-heading p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breakfast-meta {
+  display: grid;
+  gap: 10px;
+  margin: 26px auto 0;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.breakfast-meta a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .rsvp-heading {
   text-align: center;
 }
@@ -360,6 +399,7 @@
   .gift-split article > .kicker,
   .dress-heading-block > .kicker,
   .accommodation-heading > .kicker,
+  .breakfast-heading > .kicker,
   .section.split > .section-heading > .kicker,
   .rsvp-heading > .kicker,
   .faq-panel .section-heading > .kicker {
@@ -368,14 +408,16 @@
   }
 
   .photo-banner,
-  .gift-photo-banner {
+  .gift-photo-banner,
+  .breakfast-photo-banner {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
   }
 
   .photo-banner > div,
-  .gift-photo-banner > div {
+  .gift-photo-banner > div,
+  .breakfast-photo-banner > div {
     width: 100%;
     min-height: 0 !important;
     margin: 0;
@@ -383,7 +425,8 @@
   }
 
   .photo-banner img,
-  .gift-photo-banner img {
+  .gift-photo-banner img,
+  .breakfast-photo-banner img {
     width: 100vw !important;
     max-width: none !important;
     height: auto !important;
@@ -396,6 +439,7 @@
   .section-heading,
   .dress-heading-block,
   .accommodation-heading,
+  .breakfast-heading,
   .rsvp-heading,
   .faq-panel .section-heading,
   .gift-split article {
@@ -414,6 +458,7 @@
   .timeline-band,
   .dress-band,
   .accommodation-section,
+  .breakfast-section,
   .section.split,
   .section.rsvp,
   .faq-panel {
@@ -442,6 +487,15 @@
 
   .accommodation-grid a {
     min-height: 132px;
+  }
+
+  .breakfast-section {
+    padding-top: 48px;
+    padding-bottom: 58px;
+  }
+
+  .breakfast-heading h2 {
+    font-size: clamp(26px, 8vw, 38px);
   }
 
   .rsvp-heading h2 {
