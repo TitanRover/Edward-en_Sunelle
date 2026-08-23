@@ -107,6 +107,13 @@
   align-content: start;
 }
 
+.dress-heading-block h2 {
+  margin: 10px 0 0;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
 .dress-copy {
   display: grid;
   gap: 16px;
