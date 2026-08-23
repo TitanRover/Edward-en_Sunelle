@@ -42,6 +42,11 @@
   text-transform: none;
 }
 
+.breakfast-heading > .kicker {
+  font-size: clamp(38px, 5.5vw, 58px);
+  white-space: nowrap;
+}
+
 .light-button {
   color: var(--black);
   background: var(--white);
@@ -399,12 +404,16 @@
   .gift-split article > .kicker,
   .dress-heading-block > .kicker,
   .accommodation-heading > .kicker,
-  .breakfast-heading > .kicker,
   .section.split > .section-heading > .kicker,
   .rsvp-heading > .kicker,
   .faq-panel .section-heading > .kicker {
     font-size: clamp(42px, 13vw, 56px);
     line-height: 0.96;
+  }
+
+  .breakfast-heading > .kicker {
+    font-size: clamp(32px, 10vw, 40px);
+    white-space: nowrap;
   }
 
   .photo-banner,
