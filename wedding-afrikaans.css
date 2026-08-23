@@ -20,6 +20,16 @@
   white-space: nowrap;
 }
 
+h1,
+h2,
+h3,
+.timeline strong,
+.accommodation-grid strong,
+.faq-accordion summary {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
 .light-button {
   color: var(--black);
   background: var(--white);
@@ -43,6 +53,16 @@
 .band-black .detail-grid h3,
 .band-black .detail-grid span {
   color: var(--white);
+}
+
+.photo-banner > div {
+  width: 100%;
+}
+
+.photo-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .timeline-light {
@@ -91,7 +111,7 @@
 
 .dress-reference {
   width: min(100%, 280px);
-  margin: 10px 0 0;
+  margin: 10px auto 0;
 }
 
 .dress-reference img {
@@ -172,7 +192,6 @@
 
 .accommodation-grid strong {
   font-size: clamp(22px, 3vw, 32px);
-  font-weight: 400;
   line-height: 1.05;
 }
 
@@ -228,7 +247,6 @@
   padding: 20px clamp(18px, 3vw, 30px);
   color: var(--ink);
   cursor: pointer;
-  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(22px, 3vw, 34px);
   line-height: 1.1;
   list-style: none;
@@ -293,13 +311,15 @@
 
   .photo-banner > div {
     width: 100vw;
-    min-height: 112vw !important;
+    min-height: 0 !important;
     margin-left: 50%;
     transform: translateX(-50%);
   }
 
   .photo-banner img {
     width: 100vw !important;
+    height: auto !important;
+    object-fit: contain !important;
   }
 
   .timeline-heading,
@@ -310,6 +330,10 @@
   .faq-panel .section-heading,
   .gift-split article {
     text-align: center;
+  }
+
+  .dress-heading-block {
+    justify-items: center;
   }
 
   .dress-reference {
