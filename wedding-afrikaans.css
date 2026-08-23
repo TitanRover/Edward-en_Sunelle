@@ -12,7 +12,7 @@
   max-width: calc(100vw - 20px);
   margin: 0;
   color: var(--ink);
-  font-family: "Parisienne", Georgia, "Times New Roman", serif;
+  font-family: "Alex Brush", "Parisienne", Georgia, "Times New Roman", serif;
   font-size: clamp(24px, 4.1vw, 58px);
   font-weight: 400;
   line-height: 1.05;
@@ -152,7 +152,7 @@
 
 .gift-split.band-black article {
   color: var(--white);
-  background: var(--dark-card);
+  background: var(--black);
 }
 
 .gift-split.band-black h2,
