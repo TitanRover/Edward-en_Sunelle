@@ -386,14 +386,31 @@ h3,
 
   .gift-split {
     width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-left: calc(50% - 50vw);
+    transform: none;
   }
 
   .gift-photo {
+    display: block;
     width: 100vw;
-    min-height: 112vw !important;
+    min-height: 0 !important;
     border: 0;
+    background: var(--black);
+  }
+
+  .gift-photo::before {
+    display: none;
+  }
+
+  .gift-photo img {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    margin: 0 auto;
+    object-fit: contain !important;
   }
 
   .gift-split article {
