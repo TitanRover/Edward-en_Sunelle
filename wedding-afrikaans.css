@@ -1,15 +1,15 @@
 .quote-panel {
   display: grid;
   place-items: center;
-  min-height: clamp(118px, 18vw, 210px);
-  padding: clamp(24px, 4vw, 44px) 18px;
+  min-height: clamp(92px, 14vw, 168px);
+  padding: clamp(18px, 3vw, 34px) 10px;
   overflow: hidden;
   text-align: center;
 }
 
 .quote-panel p {
   width: max-content;
-  max-width: calc(100vw - 36px);
+  max-width: calc(100vw - 20px);
   margin: 0;
   color: var(--ink);
   font-family: "Parisienne", Georgia, "Times New Roman", serif;
@@ -282,17 +282,66 @@
   }
 
   .quote-panel {
-    min-height: 96px;
-    padding: 18px 8px;
+    min-height: 64px;
+    padding: 10px 0;
   }
 
   .quote-panel p {
-    max-width: calc(100vw - 16px);
-    font-size: clamp(14px, 3.6vw, 20px);
+    max-width: 100vw;
+    font-size: clamp(16px, 4.55vw, 19px);
+  }
+
+  .photo-banner > div {
+    width: 100vw;
+    min-height: 112vw !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .photo-banner img {
+    width: 100vw !important;
+  }
+
+  .timeline-heading,
+  .section-heading,
+  .dress-heading-block,
+  .accommodation-heading,
+  .rsvp-heading,
+  .faq-panel .section-heading,
+  .gift-split article {
+    text-align: center;
   }
 
   .dress-reference {
+    justify-self: center;
     width: min(100%, 240px);
+  }
+
+  .timeline-band,
+  .dress-band,
+  .accommodation-section,
+  .section.split,
+  .section.rsvp,
+  .faq-panel {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .gift-split {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gift-photo {
+    width: 100vw;
+    min-height: 112vw !important;
+    border: 0;
+  }
+
+  .gift-split article {
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .gift-split .hero-button,
@@ -301,8 +350,8 @@
   }
 
   .accommodation-section {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-top: 54px;
+    padding-bottom: 64px;
   }
 
   .accommodation-grid {
