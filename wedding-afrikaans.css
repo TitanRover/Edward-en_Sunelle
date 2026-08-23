@@ -66,16 +66,38 @@
   color: var(--white);
 }
 
-.photo-banner > div,
-.gift-photo {
+.photo-banner > div {
   width: 100%;
 }
 
-.photo-banner img,
-.gift-photo img {
+.photo-banner img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.gift-photo-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #050505;
+  overflow: hidden;
+}
+
+.gift-photo-banner > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  background: #050505;
+}
+
+.gift-photo-banner img {
+  display: block;
+  width: 100vw !important;
+  max-width: none !important;
+  height: auto !important;
+  margin: 0;
+  object-fit: contain !important;
+  object-position: center;
 }
 
 .timeline-light {
@@ -157,39 +179,9 @@
 
 .gift-simple {
   grid-template-columns: 1fr;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 0;
-}
-
-.section.gift-split > .gift-photo {
-  width: 100vw;
-  max-width: none !important;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
-.gift-photo {
-  display: grid;
-  grid-template-columns: 1fr;
-  min-height: 0 !important;
-  border: 0;
-  background: #050505;
-  overflow: hidden;
-}
-
-.gift-photo::before {
-  display: none;
-}
-
-.gift-photo img {
-  position: relative !important;
-  inset: auto !important;
-  width: 100vw !important;
-  max-width: none !important;
-  object-fit: contain !important;
-  object-position: center;
-  transform: none;
+  width: 100%;
+  margin-left: 0;
+  padding: clamp(54px, 8vw, 88px) 0;
 }
 
 .gift-split.band-black article {
@@ -376,24 +368,22 @@
   }
 
   .photo-banner,
-  .gift-split {
+  .gift-photo-banner {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     overflow: hidden;
   }
 
   .photo-banner > div,
-  .section.gift-split > .gift-photo {
-    width: 100vw;
-    max-width: none !important;
+  .gift-photo-banner > div {
+    width: 100%;
     min-height: 0 !important;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin: 0;
     transform: none;
   }
 
   .photo-banner img,
-  .gift-photo img {
+  .gift-photo-banner img {
     width: 100vw !important;
     max-width: none !important;
     height: auto !important;
@@ -429,12 +419,6 @@
   .faq-panel {
     padding-left: 18px;
     padding-right: 18px;
-  }
-
-  .gift-split {
-    max-width: none;
-    transform: none;
-    justify-items: center;
   }
 
   .gift-split article {
