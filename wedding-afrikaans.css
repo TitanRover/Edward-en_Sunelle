@@ -109,6 +109,10 @@
   object-position: center;
 }
 
+.timeline-band {
+  padding-bottom: clamp(30px, 5vw, 58px);
+}
+
 .timeline-light {
   background: var(--line);
 }
@@ -473,6 +477,10 @@
   .faq-panel {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .timeline-band {
+    padding-bottom: 28px;
   }
 
   .gift-split article {
